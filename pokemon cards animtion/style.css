@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+    padding:0px;
+    margin:0px;
+}
+
+body{
+    background-image: linear-gradient(rgb(165, 165, 165),white);
+}
+
+.container{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/*here is the trick ladies and gentleman*/
+.cards-container:hover .card{
+    opacity: 0.3;
+}
+
+.cards-container .card:hover{
+    opacity: 1;
+}
+
+.cards-container .row{
+    perspective: 800px;
+    display: flex;
+}
+
+.card{
+    height: 150px;
+    width: 150px;
+    margin:10px;
+    background-color: rgb(255, 255, 255);
+    transform:rotateY(20deg);
+    background-size: 100% 100%;
+    border-radius: 10px;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+    
+
+    animation-name: card-appear-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes card-appear-animation {
+    0%{
+        height: 0px;
+        width: 0px;
+    }
+    100%{
+        height: 150px;
+        width: 150px;
+    }
+}
+
+.card:hover{
+    transform:rotateY(0deg);
+    transition: all 0.5s;
+}
+
+/* row one */
+.row:nth-child(1) .card:nth-child(1){
+    background-image:url("assets/pikachu.webp");
+}
+.row:nth-child(1) .card:nth-child(2){
+    background-image:url("assets/eevee.jpg");
+}
+.row:nth-child(1) .card:nth-child(3){
+    background-image:url("assets/charlizard.png");
+}
+
+/* row two */
+.row:nth-child(2) .card:nth-child(1){
+    background-image:url("assets/snorlax.png");
+}
+.row:nth-child(2) .card:nth-child(2){
+    background-image:url("assets/dragonite.png");
+}
+.row:nth-child(2) .card:nth-child(3){
+    background-image:url("assets/squirtle.png");
+}
+
+/* row three */
+.row:nth-child(3) .card:nth-child(1){
+    background-image:url("assets/gyarados.png");
+}
+.row:nth-child(3) .card:nth-child(2){
+    background-image:url("assets/bulbasaur.png");
+}
+.row:nth-child(3) .card:nth-child(3){
+    background-image:url("assets/mewtwo.png");
+}
+
+.name{
+    position: absolute;
+    bottom:-100%;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    transition: all 1s;
+    background-color: rgba(0, 0, 0, 0.8);
+    color:white;
+}
+
+.card:hover .name{
+    bottom:0%;
+    transition: all 1s;
+}
+
+.card.selected{
+    animation-name: card-selected-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes card-selected-animation {
+    0%{
+        height: 150px;
+        width: 150px;
+        transform: rotateY(20deg);
+    }
+    50%{
+        height: 0px;
+        width: 0px;
+    }
+    100%{
+        height: 300px;
+        width: 300px;
+        transform: rotateY(740deg);
+    }
+}
+
+.card.not-selected{
+    animation-name: disappear-animation;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes disappear-animation {
+    0%{
+        height: 150px;
+        width: 150px;
+        border-radius: 10px;
+    }
+    100%{
+        height: 0px;
+        width: 0px;
+        border-radius: 100%;
+        display: none;
+    }
+}
+
+
+@media (max-width:500px) {
+    .cards-container{
+        flex-direction: column;
+    }
+
+    .card{
+        margin:20px 0px;
+        height: 50px;
+        width: 50px;
+    }
+    .container{
+        padding:10px;
+        height: 100vh;
+    }
+    @keyframes card-appear-animation {
+        0%{
+            height: 0px;
+            width: 0px;
+        }
+        100%{
+            height: 100px;
+            width: 100px;
+        }
+    }
+}
+
+@media (min-width:501px) {
+    .container{
+        height: 100vh;
+    }
+}

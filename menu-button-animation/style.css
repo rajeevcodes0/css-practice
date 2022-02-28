@@ -1,0 +1,116 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: #34e89e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root{
+    --button-size:100px;
+    --line-size:5px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 300px;
+    width: 300px;
+}
+
+.button-container:hover .button::after{
+    left:-200%;
+    transition: all 0.3s;
+}
+
+.button-container:hover .button::before{
+    left:200%;
+    transition: all 0.3s;
+}
+
+.button-container:hover .button p{
+    animation-name: menu-animation;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes menu-animation {
+    0%{
+        bottom: -100%;
+    }
+    50%{
+        bottom:50%;
+    }
+    75%{
+        transform: rotate(-25deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+        bottom:1%;
+    }
+}
+
+.button{
+    height: var(--button-size);
+    width: var(--button-size);
+    position: relative;
+    overflow: hidden;
+}
+
+.button::after, .button::before{
+    content:"";
+    display: block;
+    width: var(--button-size);
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    transition: all 0.3s;
+    left:0%;
+}
+
+.button::after{
+    top:0px;
+}
+
+.button::before{
+    top:calc(var(--button-size)/2 - var(--line-size)/2);
+    transform: rotate(180deg);
+}
+
+span{
+    display: block;
+    width: var(--button-size);
+    height: 5px;
+    background-color: white;
+
+    position: absolute;
+    bottom:0px;
+}
+
+.button p{
+    position: absolute;
+    bottom:-100%;
+    font-size: 33px;
+    color:white;
+}

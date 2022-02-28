@@ -1,0 +1,140 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+    background-image: url("assets/body-background.jpg");
+    background-size: 100% 100%;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    height: 50px;
+    width: 50px;
+    background-image: url("assets/pokeball.png");
+    background-size: 100% 100%;
+    background-color: transparent;
+    border:none;
+    border-radius: 100%;
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+}
+
+.window{
+    height: 300px;
+    width: 900px;
+    overflow: hidden;
+    margin:10px;
+}
+.card-array{
+    display: flex;
+    position: relative;
+    transition: all 0.3;
+}
+
+.card{
+    height: 300px;
+    min-width: 300px;
+    
+    
+    border-radius: 10px;
+    background-size: 100% 100%;
+
+    transform: scale(0.5);
+    transition: all 0.5s;
+    opacity: 0.3;
+}
+
+.card.selected{
+    transform: scale(1);
+    transition: all 0.5s;
+    opacity: 1;
+}
+
+.position-0{
+    right:0px;
+    transition: all 0.5s;
+}
+.position-1{
+    right:300px;
+    transition: all 0.5s;
+}
+.position-2{
+    right:600px;
+    transition: all 0.5s;
+}
+.position-3{
+    right:900px;
+    transition: all 0.5s;
+}
+.position-4{
+    right:1200px;
+    transition: all 0.5s;
+}
+
+
+.card:nth-child(1){
+    background-image: url("assets/gyarados.png");
+}
+.card:nth-child(2){
+    background-image: url("assets/mewtwo.png");
+}
+.card:nth-child(3){
+    background-image: url("assets/pikachu.png");
+}
+.card:nth-child(4){
+    background-image: url("assets/snorlax.png");
+}
+.card:nth-child(5){
+    background-image: url("assets/squirtle.png");
+}
+
+@media (max-width:500px) {
+    .card{
+        min-width: 100px;
+        height: 100px;
+    }
+    .window{
+        width: 300px;
+        height: 100px;
+    }
+
+    .position-0{
+        right:0px;
+        transition: all 0.5s;
+    }
+    .position-1{
+        right:100px;
+        transition: all 0.5s;
+    }
+    .position-2{
+        right:200px;
+        transition: all 0.5s;
+    }
+    .position-3{
+        right:300px;
+        transition: all 0.5s;
+    }
+    .position-4{
+        right:400px;
+        transition: all 0.5s;
+    }
+
+    button{
+        height: 20px;
+        width: 20px;
+    }
+}

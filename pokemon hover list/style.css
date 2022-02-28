@@ -1,0 +1,56 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    display: flex;
+    
+
+}
+
+.name-list{
+    height: 100%;
+}
+
+.name-list p{
+    margin:10px 0px;
+    padding:10px;
+    font-size: 20px;
+    border: 1px solid white;
+    color:white;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(185, 184, 184);
+}
+
+.name-list p:hover{
+    background-color: rgb(230, 55, 84);
+    box-shadow: 0px 0px 10px 1px rgb(230, 55, 84);
+}
+
+.image-container{
+    
+    background-size: 100% 100%;
+    height: 400px;
+    width: 400px;
+    background-image: url("assets/bulbasaur.png");
+}
+
+.name-list p:nth-child(1):hover .image-container{
+    background-image: url("assets/bulbasaur.png");
+}
