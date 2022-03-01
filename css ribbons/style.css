@@ -1,0 +1,123 @@
+html,body{
+    margin:0;
+    padding:0;
+    background-color: rgb(224, 222, 222);
+}
+
+.tile-container{
+    margin-top:20%;
+    margin-left: 20%;
+    
+}
+.tile{
+    height:100px;
+    width:100px;
+    display:inline-block;
+    background-color: rgba(151, 150, 150);
+    margin: 0 20px;
+    vertical-align: top;
+    box-shadow: 2px 2px 2px 0px rgb(99, 98, 98);
+
+}
+.ribbon-one{
+    margin:0;
+    padding:0;
+    height:50px;
+    width:20px;
+    background-color: rgb(248, 125, 136);  
+    position: relative;
+    left:70px;
+    top:-10px;
+    box-shadow: 2px 2px 2px 0px rgb(46, 45, 45);
+}
+
+.ribbon-one:before{
+    content: "";
+    left:-10px;
+    position: absolute;
+    border-top: 5px solid transparent;
+    border-right: 5px solid rgb(253, 101, 114);
+    border-bottom: 5px solid rgb(253, 101, 114);
+    border-left: 5px solid transparent;
+}
+
+.ribbon-two{
+    margin:0;
+    padding:0;
+    height:50px;
+    width:20px;
+    background-color: rgb(248, 125, 136);  
+    position: relative;
+    left:10px;
+    top:-10px;
+    box-shadow: -2px 2px 2px 0px rgb(46, 45, 45);
+}
+
+.ribbon-two:before{
+    content: "";
+    right:-10px;
+    position: absolute;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgb(253, 101, 114);
+    border-left: 5px solid rgb(253, 101, 114);
+}
+
+
+
+.ribbon-three{
+    margin:0;
+    padding:0;
+    height:50px;
+    width:20px;
+    background-color: rgb(248, 125, 136);  
+    position: relative;
+    left:70px;
+    top:-10px;
+    box-shadow: 3px 0.1px 2px -2px rgb(46, 45, 45);
+}
+
+.ribbon-three:before{
+    content: "";
+    right:-10px;
+    position: absolute;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgb(253, 101, 114);
+    border-left: 5px solid rgb(253, 101, 114);
+}
+
+.ribbon-three:after{
+    content: "";
+    position: absolute;
+    border:10px solid black;
+    bottom:0;
+    border-left:10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(151, 150, 150);
+    
+}
+
+.ribbon-four{
+    margin:0;
+    padding:0;
+    height:20px;
+    width:70px;
+    background-color: rgb(248, 125, 136);  
+    position: relative;
+    left:-10px;
+    top:10px;
+    box-shadow: 2px 2px 2px 0px rgb(46, 45, 45);        
+}
+.ribbon-four:before{
+    content:'';
+    position: absolute;
+    top:20px;
+    left:0px;
+    border-top: 5px solid rgb(248, 99, 111);
+    border-right: 5px solid rgb(248, 99, 111);
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+
+}

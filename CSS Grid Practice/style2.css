@@ -1,0 +1,31 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap:1em;
+    grid-auto-rows: minmax(100px,auto);
+}
+
+.nested{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:1em;
+    grid-auto-rows: 70px;
+}
+.nested div{
+    border:1px solid red;
+    
+}
+.nested>div:nth-child(odd){
+    background-color: rgb(200, 223, 223);
+}
+
+
+.wrapper>div:nth-child(odd){
+    background-color: rgb(196, 179, 179);
+    padding:10px;
+}
+
+.wrapper>div:nth-child(even){
+    background-color: rgb(250, 196, 196);
+    padding:10px;
+}

@@ -1,0 +1,47 @@
+html,body{
+    height:100%;
+    width:100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container{
+    height: 50px;
+    width: 500px;
+    margin-top:20%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(238, 237, 237);
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px black;
+}
+
+#search-icon,#search-filed,#x-icon{
+    display:inline-block;
+    font-size: 20px;
+    
+}
+
+#search-icon{
+    color:grey;
+    width: 10%;
+    text-align: left;
+}
+
+#search-field{
+    display: inline-block;
+    height:30px;
+    width:78%;
+    border-radius: 5px;
+    border: none;
+    outline:none;
+    background-color: rgb(238, 237, 237);
+    font-size: 20px;
+}
+
+#x-icon{
+    display: none;
+    color:grey;
+    width: 10%;
+    text-align: right;
+}

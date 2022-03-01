@@ -1,0 +1,12 @@
+{
+    "question":"Python was invented by",
+    "options":[
+        {"1":"Bjourn Stroustrup"},
+        {"2":"James Gosling"},
+        {"3":"Guido van Rossum"},
+        {"4":"Denis Ritche"}        
+    ],
+    "correct_option":"3",
+    "topic":"language_history",
+    "language":"python"
+}

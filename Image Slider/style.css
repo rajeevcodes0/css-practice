@@ -1,0 +1,39 @@
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
+#container img{
+    height:400px;
+    width: 400px;
+}
+#container{
+    display: inline-block;
+    border: 10px solid white;
+    width:400px;
+    height:400px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+#left-button{
+    vertical-align: middle;
+    vertical-align: middle;
+    border: none;
+    background: #7de87d;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#right-button{
+    vertical-align: middle;
+    vertical-align: middle;
+    border: none;
+    background: #7de87d;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}

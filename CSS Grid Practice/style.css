@@ -1,0 +1,18 @@
+.wrapper{
+    display:grid;
+    grid-template-columns:70% 30%;
+    /* grid-column-gap:1em ;
+    grid-row-gap:1em; */
+    grid-gap:1em;
+    
+}
+
+.wrapper>div:nth-child(odd){
+    background-color: rgb(196, 179, 179);
+    padding:10px;
+}
+
+.wrapper>div:nth-child(even){
+    background-color: rgb(250, 196, 196);
+    padding:10px;
+}

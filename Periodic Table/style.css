@@ -1,0 +1,231 @@
+html,body{
+    margin:0;
+    padding:0;
+    font-size: 10px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(240, 243, 198);
+}
+
+#periodic-table{
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    justify-content: center;
+    grid-gap:1em;
+    height:70%;
+    width:80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:5%;
+}
+
+.element{
+    font-size: 10px;
+    border-radius: 20px;
+    border:1px solid black;
+    text-align: center;
+    padding: 5px;
+    font-family: 'New Tegomin', serif;
+}
+.element:hover{
+    background-color: rgb(73, 72, 72);
+    color:white;
+}
+
+.atomic-number{
+    margin:0;
+}
+.symbol{
+    font-size: 20px;
+    margin:0;
+}
+
+.s-block{
+    background-color: tomato;
+}
+
+.p-block{
+    background-color: rgb(243, 243, 123);
+}
+
+.d-block{
+    background-color: rgb(115, 115, 247);
+}
+
+.f-block{
+    background-color: rgb(84, 243, 84);
+}
+/*arrangement*/
+
+.He{
+    grid-column: 18;
+}
+
+.B{
+    grid-column: 13;
+}
+.Al{
+    grid-column: 13;
+}
+/*Lanthanides*/
+.La{
+    grid-column: 3;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Ce{
+    grid-column: 4;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Pr{
+    grid-column: 5;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Nd{
+    grid-column: 6;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Pm{
+    grid-column: 7;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Sm{
+    grid-column: 8;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Eu{
+    grid-column: 9;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Gd{
+    grid-column: 10;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Tb{
+    grid-column: 11;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Dy{
+    grid-column: 12;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Ho{
+    grid-column: 13;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Er{
+    grid-column: 14;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Tm{
+    grid-column: 15;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+.Yb{
+    grid-column: 16;
+    grid-row: 8;
+    background-color: rgb(84, 243, 84);
+}
+
+/*Actinides*/
+.Ac{
+    grid-column: 3;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Th{
+    grid-column: 4;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Pa{
+    grid-column: 5;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.U{
+    grid-column: 6;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Np{
+    grid-column: 7;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Pu{
+    grid-column: 8;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Am{
+    grid-column: 9;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Cm{
+    grid-column: 10;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Bk{
+    grid-column: 11;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Cf{
+    grid-column: 12;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Es{
+    grid-column: 13;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Fm{
+    grid-column: 14;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.Md{
+    grid-column: 15;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+.No{
+    grid-column: 16;
+    grid-row: 9;
+    background-color: rgb(84, 243, 84);
+    
+}
+
+/*special*/
+.Lr{
+    background-color: rgb(115, 115, 247);
+}
