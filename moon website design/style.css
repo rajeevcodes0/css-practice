@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    padding:0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.container{
+
+    background-image: url("./background-image.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-position: right top 20%;
+
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.logo-container{
+    color:white;
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.logo-container i{
+    font-size: 40px;
+    margin:10px;
+    animation-name: logo-rotation-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logo-rotation-animation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+nav{
+    width: 50%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link-item-container{
+    list-style: none;
+    font-size: 30px;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.nav-link-item-container:hover{
+    background-color: rgb(71, 255, 148);
+}
+
+.nav-link-item-container:hover a{
+    color:black;
+}
+
+.nav-link-item-container a{
+    color:white;
+    text-decoration: none;
+}
+
+.text-container{
+    height: 50%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    width: 50%;
+    margin-top: 10%;
+
+}
+
+.text-container h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.text-container h3{
+    font-size: 30px;
+}
+
+
+
+.call-to-action-button{
+    background-color: tomato;
+    padding:20px;
+    font-size: 40px;
+    font-weight: bold;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.call-to-action-button:hover{
+    background-color: rgb(71, 255, 80);
+}
