@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:var(--font-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --theme-color:rgb(105, 133, 194);
+    --font-color: white;
+}
+
+body{
+    overflow: hidden;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--theme-color);
+    overflow: hidden;
+}
+
+.overlay{
+    background-color: var(--font-color);
+    height: 60vh;
+    width: 60vh;
+    border-radius: 100%;
+    position: absolute;
+    top:-30vh;
+    left:-30vh;
+    transition: all 0.3s;
+    z-index: 2;
+}
+
+.overlay-fill-animation-class{
+    animation-name: overlay-fill-animation;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes overlay-fill-animation {
+    0%{
+        height: 60vh;
+        width: 60vh;
+        top:-30vh;
+        left:-30vh;
+
+    }
+    100%{
+        height: 300vh;
+        width: 300vw;
+        top:-150vh;
+        left:-150vw;
+    }
+}
+
+.overlay-fill-reverse-animation-class{
+    animation-name: overlay-fill-reverse-animation;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes overlay-fill-reverse-animation {
+    
+    0%{
+        height: 300vh;
+        width: 300vw;
+        top:-150vh;
+        left:-150vw;
+    }
+    100%{
+        height: 60vh;
+        width: 60vh;
+        top:-30vh;
+        left:-30vh;
+
+    }
+}
+
+.overlay-fill-reverse-animation-class-mobile{
+    animation-name: overlay-fill-reverse-animation-mobile;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes overlay-fill-reverse-animation-mobile {
+    
+    0%{
+        height: 300vh;
+        width: 300vw;
+        top:-150vh;
+        left:-150vw;
+    }
+    100%{
+        height: 20vh;
+        width: 20vh;
+        top:-10vh;
+        left:-10vh;
+
+    }
+}
+
+.link-list{
+    display: block;
+    position: absolute;
+    top:10%;
+    left:10%;
+    z-index: 4;
+    margin:10px 0px;
+}
+
+ul li{
+    color:var(--theme-color);
+    list-style: none;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transform: translateX(0px);
+    transition: transform 0.3s;
+    margin:20px;
+}
+
+ul li:hover{
+    position: relative;
+    transform: translateX(20px);
+    transition: transform 0.3s;
+}
+
+ul li:hover::after{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--theme-color);
+}
+
+.link-list-hidden{
+    display: none;
+    position: absolute;
+    top:10%;
+    left:10%;
+    z-index: 4;
+}
+
+.menu-status-icon-container{
+    position: absolute;
+    z-index: 2;
+}
+.hamburger-icon-container, .arrow-icon-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top:0;
+    left:0;
+    margin:10px;
+}
+
+.hamburger-icon-container-hidden{
+    display: none;
+}
+
+.arrow-icon-container{
+    transform: rotate(180deg);
+    display: none;
+}
+
+.arrow-icon-animation-class{
+    display: block;
+    animation-name: arrow-icon-animation;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes arrow-icon-animation {
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(270deg);
+    }
+}
+
+.arrow-icon-reverse-animation-class{
+    display: block;
+    animation-name: arrow-icon-reverse-animation;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes arrow-icon-reverse-animation {
+    0%{
+        transform: rotate(270deg) scale(1);
+
+    }
+    100%{
+        transform: rotate(180deg) scale(0);
+    }
+}
+#arrow-path-in-svg{
+    fill:var(--theme-color);
+}
+
+#hamburger-path-in-svg{
+    fill:var(--theme-color);
+}
+
+.banner-text{
+    position: absolute;
+    width: 30%;
+    top:20%;
+    right:10%;
+    font-size: 20px;
+}
+
+@media (max-width:500px) {
+    .banner-text{
+        top:50%;
+        transform: translateY(-50%);
+        width: 80%;
+    }
+    .overlay{
+        height: 20vh;
+        width: 20vh;
+        border-radius: 100%;
+        position: absolute;
+        top:-10vh;
+        left:-10vh;
+        transition: all 0.3s;
+        z-index: 2;
+    }
+    .hamburger-icon-container, .arrow-icon-container{
+        height: 25px;
+        width: 25px;
+        margin:10px;
+    }
+}
+
+
